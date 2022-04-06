@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background: url(./calendar-7041843_1280.png);
+}
+
+#title {
+    position: absolute;
+    color: brown;
+    font-size: 60px;
+    margin: 0.5em;
+}
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    float: right;
+    margin: 2em;
+}
+
+#login-btn, #register-btn {
+    color: orangered;
+    background: none;
+    border-style: none;
+    font-size: xx-large;
+}
+
+#register-btn {
+    color: black;
+}
+
+#login-btn:hover {
+    cursor: pointer;
+    color: white;
+}
+
+#register-btn:hover {
+    cursor: pointer;
+    color: white;
+}
+#greeting-msg {
+    width: 50%;
+    position: absolute;
+    font-size: xx-large;
+    margin: 5em;
+}
