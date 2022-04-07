@@ -5,7 +5,7 @@
 }
 
 body { 
-    background-color: #aedfe1;;
+    background-color: #aedfe1;
 }
 
 h1 {
@@ -47,4 +47,8 @@ button {
 button:hover {
     cursor: pointer;
     color: orange;
+}
+
+#myP-btn {
+    margin-right: 2em;
 }

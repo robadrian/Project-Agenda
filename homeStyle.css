@@ -1,0 +1,68 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #aedfe1;;
+}
+
+#class-profile {
+    display: flex;
+    font-size: xx-large;
+    margin-left: 20%;
+    justify-content: space-between;
+    justify-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+
+#navigation {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.423);
+    width: 20%;
+}
+
+.add-view {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.view-btn {
+    color: orangered;
+    margin-bottom: 2em;
+    font-size: xx-large;
+    background: none;
+    border: none;
+}
+
+.add-btn {
+    font-size: large;
+    background: none;
+    border: none;
+    color: green;
+}
+
+.view-btn:hover {
+    cursor: pointer;
+    color: brown;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+#myP-btn {
+    background-color: black;
+    color: white;
+    padding: .3em;
+    margin-right: 2em;
+    margin-top: 1em;
+}
