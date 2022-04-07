@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #aedfe1;;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3em;
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup-info {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.423);
+    padding: 1.3em;
+    margin: 3em auto 3em auto;
+    width: 40%;
+    flex-direction: column;
+}
+
+input {
+    margin-top: 1em;
+    text-align: center;
+    outline: none;
+    font-size: xx-large;
+    border-style: none;
+    border-radius: 20%;
+}
+
+button {
+    margin: 1em auto 0 auto;
+    width: 30%;
+    background: none;
+    border-style: none;
+    font-size: xx-large;
+}
+
+button:hover {
+    cursor: pointer;
+    color: orange;
+}

@@ -1,5 +1,6 @@
 'use strict'
 
-const loginPage = () => {
-    window.location.assign('./login.html')
+const newPage = (link) => {
+    window.location.assign(link)
 }
+
