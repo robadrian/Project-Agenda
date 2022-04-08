@@ -11,9 +11,14 @@ body {
 #title {
     position: absolute;
     color: brown;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 138, 0.632);
+    padding: 0.2em;
     font-size: 60px;
+    text-shadow: 2px 2px 2px #F2FF08;
     margin: 0.5em;
 }
+
 .navigation {
     display: flex;
     justify-content: space-around;
@@ -26,6 +31,7 @@ body {
     color: orangered;
     background: none;
     border-style: none;
+    padding: 0.2em;
     font-size: xx-large;
 }
 
@@ -34,18 +40,26 @@ body {
 }
 
 #login-btn:hover {
+    box-sizing: border-box;
     cursor: pointer;
     color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 0.2em;
+    
 }
 
 #register-btn:hover {
     cursor: pointer;
     color: white;
+    background-color: orangered;
+    border-radius: 10px;
 }
 #greeting-msg {
     width: 50%;
     position: absolute;
     font-size: xx-large;
     margin: 5em;
+    text-shadow: 1px 1px 1px #F2FF08;
 }
 
