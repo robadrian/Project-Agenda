@@ -7,20 +7,24 @@
 body {
     background-color: #aedfe1;;
 }
-
-#class-profile {
+#profile {
+    
+    margin: 1em 0 0.5em 85%;
+}
+main {
     display: flex;
-    font-size: xx-large;
-    margin-left: 20%;
-    justify-content: space-between;
-    justify-items: center;
     flex-direction: row;
-    text-align: center;
+    justify-content: space-between;
 }
 
-
+.work-area {
+    margin-top: 0;
+    margin-right: 6em;
+    background-color: rgba(255, 255, 255, 0.423);
+    width: 60%;
+}
 #navigation {
-    margin-top: 2em;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.423);
@@ -65,4 +69,12 @@ body {
     padding: .3em;
     margin-right: 2em;
     margin-top: 1em;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:5em;
+    background-color: rgba(255, 255, 255, 0.223);
 }
