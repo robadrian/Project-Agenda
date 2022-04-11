@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./pencil-308509_1280.png">
     <link rel="stylesheet" href="./loginStyle.css">
+    <script src="./main.js"></script>
     <title>Agenda / Login</title>
 </head>
 <body>
     <form class="loginForm">
-    <h1 id="requestLogin">Please enter your credentials</h1>
-    <div id="credentials">
-    <input type="text" placeholder="Username" id="username-input-login">
-    <input type="text" placeholder="Password" id="password-input-signup">
-    <button>Login</button>
-    </div>
+        <h1 id="requestLogin">Please enter your credentials</h1>
+    
+        <div id="credentials">
+            <input type="text" placeholder="Username" id="username-input-login">
+    
+            <input type="text" placeholder="Password" id="password-input-signup">
+    
+            <button onclick="newPage('./home.html')">Login</button> 
+        </div>
     </form>
 </body>
 </html>

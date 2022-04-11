@@ -17,13 +17,16 @@ main {
     justify-content: space-between;
 }
 
-.work-area {
+#work-area {
+    border-radius: 20px;
     margin-top: 0;
     margin-right: 6em;
     background-color: rgba(255, 255, 255, 0.423);
     width: 60%;
 }
 #navigation {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     margin-top: 0;
     display: flex;
     flex-direction: column;
@@ -56,6 +59,8 @@ main {
 .view-btn:hover {
     cursor: pointer;
     color: brown;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .add-btn:hover {
@@ -75,14 +80,49 @@ footer {
     position: fixed;
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     bottom: 0;
-    width: 100%;
-    height:5em;
-    background-color: rgba(255, 255, 255, 0.223);
+    width: 40%;
+    animation-name: footer-ani2;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    border-top-right-radius: 30px;
+    height:2em;
+    background-color: rgba(255, 7, 7, 0.649);
 }
 
 footer img {
     margin-left: 10em;
     margin-right: 10em;
     margin-top: 2em;
+}
+
+footer::after {
+    font-size: x-large;
+    color: white;
+    content: 'Social Media';
+    position: absolute;
+}
+
+footer:hover {
+    animation-name: footer-ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes footer-ani {
+    100% {
+        height: 5em;
+        width: 100%;
+    }
+}
+
+
+@keyframes footer-ani2 {
+    100% {
+        height: 2em;
+        width: 40%;
+    }
 }

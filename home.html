@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./pencil-308509_1280.png">
+    <link rel="stylesheet" href="./contactModalStyle.css">
     <link rel="stylesheet" href="./homeStyle.css">
+    <script src="./addTaskModal.js"></script>
     <title>Agenda / Home</title>
 </head>
 <body>
@@ -14,29 +16,30 @@
         <nav id="navigation">
             <div class="add-view">
                 <button class="view-btn">Contacts</button>
-                <button class="add-btn">Add contact +</button>
+                <button class="add-btn"  id="addContact" onclick="addContact()">Add contact +</button>
             </div>
             <div class="add-view">
                 <button class="view-btn">Tasks</button>
-                <button class="add-btn">Add task +</button>
+                <button class="add-btn" onclick="taskModal()">Add task +</button>
             </div>
             <div class="add-view">
                 <button class="view-btn">Apointments</button>
                 <button class="add-btn">Add apointment +</button>
             </div>
         </nav>   
-        <div class="work-area">
-            <h1>Here will stand the forms for new tasks, contacts and apointments,
+        <div id="work-area">
+            <h1 id="desc">Here will stand the forms for new tasks, contacts and apointments,
                 and also already made ones
             </h1>
         </div>
     </main>
 
+    
+
     <footer>
         <img src="./facebook.png" alt="" width="40px" height="40px">
         <img src="./whatsapp.png" alt="" width="40px" height="40px">
         <img src="./instagram.png" alt="" width="40px" height="40px">
-
     </footer>
 </body>
 </html>
