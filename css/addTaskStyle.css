@@ -1,0 +1,37 @@
+#taskDiv {
+    display: flex;
+    flex-direction: column;
+    animation-name: taskInput;
+    animation-duration: 3s;
+    box-sizing: border-box;
+}
+@keyframes taskInput {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#taskTitle {
+    font-size: xx-large;
+    margin-top: 3em;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+    outline: none;
+}
+
+#taskDescription {
+    font-size: xx-large;
+    margin-top: 3em;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+    outline: none;
+}
