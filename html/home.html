@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/homeStyle.css">
     <link rel="icon" href="../images/pencil-308509_1280.png">
-    <link rel="stylesheet" href="../css/contactModalStyle.css">
+    <link rel="stylesheet" href="../css/addContactStyle.css">
+    <link rel="stylesheet" href="../css/addTaskStyle.css">
     <link rel="stylesheet" href="../css/homeStyle.css">
-    <script src="../javascript/addTaskModal.js"></script>
+    <script src="../javascript/addTask.js"></script>
+    <script src="../javascript/addContact.js"></script>
     <title>Agenda / Home</title>
 </head>
 <body>
@@ -21,11 +23,11 @@
             </div>
             <div class="add-view">
                 <button class="view-btn">Tasks</button>
-                <button class="add-btn" onclick="taskModal()">Add task +</button>
+                <button class="add-btn" id='addTask' onclick="addTask()">Add task +</button>
             </div>
             <div class="add-view">
                 <button class="view-btn">Apointments</button>
-                <button class="add-btn">Add apointment +</button>
+                <button class="add-btn" id="addApoint">Add apointment +</button>
             </div>
         </nav>   
         <div id="work-area">
