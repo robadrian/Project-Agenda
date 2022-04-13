@@ -1,11 +1,12 @@
-#taskDiv {
+#apointDiv {
     display: flex;
     flex-direction: column;
-    animation-name: taskInput;
+    animation-name: apointInput;
     animation-duration: 3s;
     box-sizing: border-box;
 }
-@keyframes taskInput {
+
+@keyframes apointInput {
     0% {
         opacity: 0;
     }
@@ -14,29 +15,15 @@
     }
 }
 
-#taskTitle {
-    font-size: xx-large;
-    margin-top: 3em;
-    width: 60%;
-    text-align: center;
+#title {
     margin-left: auto;
     margin-right: auto;
-    border-style: none;
-    outline: none;
+    margin-top: 2em;
+    color: violet;
+    text-shadow: 2px 3px 0px #00000037;
 }
 
-#taskDescription {
-    font-size: xx-large;
-    margin-top: 3em;
-    width: 60%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: none;
-    outline: none;
-}
-
-#addTaskBtn {
+#addApointBtn {
     margin-top: 3em;
     width: 30%;
     margin-left: auto;
@@ -44,4 +31,27 @@
     font-size: xx-large;
     border: none;
     background-color: rgba(30, 180, 30, 0.441);
+}
+
+#apointDescription {
+    font-size: xx-large;
+    margin-top: 3em;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+    outline: none;
+
+}
+#date {
+    font-size: xx-large;
+    margin-top: 3em;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+    outline: none;
+
 }

@@ -9,40 +9,57 @@
     <link rel="stylesheet" href="../css/addContactStyle.css">
     <link rel="stylesheet" href="../css/addTaskStyle.css">
     <link rel="stylesheet" href="../css/homeStyle.css">
+    <link rel="stylesheet" href="../css/addApointStyle.css">
     <script src="../javascript/addTask.js"></script>
     <script src="../javascript/addContact.js"></script>
+    <script src="../javascript/addApoint.js"></script>
     <title>Agenda / Home</title>
 </head>
 <body>
+
     <button class="view-btn" id="profile">Profile</button>
+    
     <main>
+
         <nav id="navigation">
+
+            <!--Contacts buttons -->
+
             <div class="add-view">
                 <button class="view-btn">Contacts</button>
                 <button class="add-btn"  id="addContact" onclick="addContact()">Add contact +</button>
             </div>
+
+             <!--Task buttons -->
+
             <div class="add-view">
                 <button class="view-btn">Tasks</button>
                 <button class="add-btn" id='addTask' onclick="addTask()">Add task +</button>
             </div>
+
+             <!--Apointment buttons -->
+
             <div class="add-view">
                 <button class="view-btn">Apointments</button>
-                <button class="add-btn" id="addApoint">Add apointment +</button>
+                <button class="add-btn" id="addApoint" onclick="addApoint()">Add apointment +</button>
             </div>
-        </nav>   
+        </nav> 
+
         <div id="work-area">
             <h1 id="desc">Here will stand the forms for new tasks, contacts and apointments,
                 and also already made ones
             </h1>
         </div>
+
     </main>
 
-    
+    <!--SOCIAL MEDIA -->
 
     <footer>
         <img src="../images/facebook.png" alt="" width="40px" height="40px">
         <img src="../images/whatsapp.png" alt="" width="40px" height="40px">
         <img src="../images/instagram.png" alt="" width="40px" height="40px">
     </footer>
+
 </body>
 </html>
