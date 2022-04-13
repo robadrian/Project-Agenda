@@ -5,7 +5,7 @@ let taskModal = `
         <h1 id='title'> NEW TASK </h1>
         <input placeholder='Title' id='taskTitle'> 
         <input placeholder='Description' id='taskDescription' type='number'>
-        <button id='addBtn'> Add </button>
+        <button id='addTaskBtn'> Add </button>
     </div>
 `
 
