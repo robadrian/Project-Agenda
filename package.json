@@ -8,6 +8,10 @@
         "type" : "git",
         "url" : "https://github.com/robadrian/Project-Agenda"
     }, 
-    "author" : "Adrian Rob"
+    "author" : "Adrian Rob",
+
+    "dependencies": { 
+        "json sever" : "0.17.0"
+    }
 }
 

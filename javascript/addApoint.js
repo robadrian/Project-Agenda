@@ -7,7 +7,9 @@ const apointModal = `<div id='apointDiv'>
 <button id='addApointBtn'> Add </button>
 </div>`
 
-function addApoint () {
+
+
+function addApoint (task, contact, apoint) {
     const container = document.getElementById('work-area');
     const text = document.getElementById('desc');
     const taskDiv = document.getElementById('taskDiv')
@@ -20,3 +22,5 @@ function addApoint () {
     document.getElementById('addTask').disabled = false;
     document.getElementById('addApoint').disabled = true;
 }
+
+

@@ -5,7 +5,7 @@ let conatctModal = `
         <h1 id='title'> NEW CONTACT </h1>
         <input placeholder='Full Name' id='contactName'> 
         <input placeholder='Phone Number' id='contactNumber' type='number'>
-        <button id='addContactBtn'> Add </button>
+        <button id='addContactBtn' onclick="addContactCard()" > Add </button>
     </div>
 `
 
@@ -22,3 +22,4 @@ function addContact () {
     document.getElementById('addTask').disabled = false;
     document.getElementById('addApoint').disabled = false;
 }
+
