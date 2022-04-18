@@ -1,9 +1,10 @@
 {
-    "posts" : [
-        {
-            "id" : 1,
-            "title" : "json-server",
-            "author" : "Adrian"
-        }
-    ]
+  "users": [
+    {
+      "fullName": "Adrian Rob",
+      "userName": "robadrian_va",
+      "password": "bosu2bosu2",
+      "id": 1
+    }
+  ]
 }

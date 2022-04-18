@@ -6,27 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/pencil-308509_1280.png">
     <link rel="stylesheet" href="../css/registerStyle.css">
+    <script src="../index.js"></script>
     <script src="../javascript/main.js"></script>
     <title>Agenda / Register</title>
 </head>
 <body>
+  
+    <!--SIGNUP CREDENTIALS -->
 
-    <form id="signup-form">
+        
+        <div id="signup-form">
+            <h1>Please insert your credentials</h1>
 
-        <!--SIGNUP CREDENTIALS -->
-
-        <h1>Please insert your credentials</h1>
-
-        <div id="signup-info">
-
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Username">
-            <input type="text" placeholder="Password">
-            <input type="text" placeholder="Confirm Password">
-            <button>Register</button>
+            <input type="text" placeholder="Full Name" id="fullname" name="fullname">
+            <input type="text" placeholder="Username" id="username" name="username" >
+            <input type="password" placeholder="Password" id="password" name="password">
+            <input type="password" placeholder="Confirm Password" id="confirmpassword">
+            <button onclick="userDuplicate()">Register</button>
             
         </div>
-
-    </form>
 </body>
 </html>
