@@ -1,10 +1,14 @@
 {
   "users": [
     {
-      "fullName": "Adrian Rob",
-      "userName": "robadrian_va",
+      "fullName": "Rob Vasile Adrian",
+      "userName": "adirobadi",
       "password": "bosu2bosu2",
+      "logged": true,
       "id": 1
     }
-  ]
+  ],
+  "contacts": [],
+  "tasks": [],
+  "apoints": []
 }

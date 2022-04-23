@@ -1,83 +1,130 @@
+/* 
+background-color : rgba(248, 229, 229, 1)
+title-color : #000000
+text : #000000 or white
+buttons-background : rgba(250, 37, 94, 1)
+navs-background-color: rgba(195, 158, 160, 1)
+
+*/
+@font-face {
+    font-family: title;
+    src: url(/fonts/MsMadi-Regular.ttf);
+}
+@font-face {
+    font-family: main;
+    src: url(/fonts/AlfaSlabOne-Regular.ttf);
+}
 * {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    overflow-x: hidden;
+    font-family: main;
 }
 
 body {
-    background: url(../images/calendar-7041843_1280.png);
+    background-color: rgba(248, 229, 229, 1);
 }
 
 #title {
-    position: absolute;
-    color: brown;
-    border-radius: 10px;
-    padding: 0.2em;
-    font-size: 60px;
-    animation-name: msg;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    margin: 0.5em;
+    font-family: title;
+    font-size: 4em;
+    width: 30%;
+    margin: 1rem;
+}
+.main {
+    display: flex;
+    flex-direction: row;
 }
 
 .navigation {
     display: flex;
     justify-content: space-around;
-    width: 45%;
-    float: right;
-    margin: 2em;
+    -webkit-box-shadow: -13px 9px 30px 0px rgba(250, 37, 94, .6); 
+    box-shadow: -13px 9px 30px 0px rgba(250, 37, 94, 0.6);
+    background-color: rgba(195, 158, 160, 0.7);
+    padding: 1rem;
+    width: 70%;
+    margin-left: 30%;
+    margin-bottom: 40px;
+    animation-name: nav;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    transform: translateX(800px);
+    border-bottom-left-radius: 23px;
+
 }
 
-#login-btn, #register-btn {
-    color: orangered;
-    background: none;
+#login-btn {
+    background-color: rgba(250, 37, 94, 1);
     border-style: none;
-    padding: 0.2em;
-    font-size: xx-large;
-}
-
-#register-btn {
-    color: black;
+    padding: 1rem;
+    border-radius: 23px;
+    font-size: 1.5rem;
 }
 
 #login-btn:hover {
-    box-sizing: border-box;
+    background-color: #F8E5E5;
+    color: #000;
     cursor: pointer;
-    color: white;
-    background-color: black;
-    border-radius: 10px;
-    -webkit-box-shadow: 25px 12px 40px 0px #000000; 
-    box-shadow: 25px 12px 40px 0px #000000;
-    padding: 0.2em;
-    
 }
 
-#register-btn:hover {
-    cursor: pointer;
+#register-btn {
+    background-color: #000;
     color: white;
-    background-color: orangered;
-    border-radius: 10px;
-    -webkit-box-shadow: 25px 12px 40px 0px #000000; 
-    box-shadow: 25px 12px 40px 0px #000000;
+    border-style: none;
+    padding: 1rem;
+    border-radius: 23px;
+    font-size: 1.5rem;
 }
+#register-btn:hover {
+    background-color: #F8E5E5;
+    color: black;
+    cursor: pointer;
+}
+
+@keyframes nav {
+    100% {
+        transform: translateX(0);
+    }
+}
+
 #greeting-msg {
-    width: 50%;
-    position: absolute;
-    font-size: xx-large;
-    margin: 5em;
+    box-sizing: border-box;
+    background-color: rgba(195, 158, 160, 0.7);
+    padding: 5em;
+    max-width: 50%;
+    transform: scale(0.1);
     animation-name: msg;
-    animation-delay: 1s;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-fill-mode: forwards;
-    text-shadow: 1px 1px 1px #bb13137b;
+    font-size: 30px;
+    margin: 20px auto 2em auto;
+    filter: blur(6px);
+    -webkit-box-shadow: -13px 9px 5px 0px rgba(250, 37, 94, 0.6); 
+    box-shadow: -13px 9px 5px 0px rgba(250, 37, 94, 0.6);
+    border-radius: 23px;
+
 }
 
 @keyframes msg {
-    0% {
-        text-shadow: 1px 1px 1px #bb13137b;
-    }
     100% {
-        text-shadow: 5px 5px 5px #bb13137b;
+        transform: scale(1);
+        filter: blur(0px);
     }
+}
+
+
+footer {
+    position: fixed;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 0;
+    padding: 30px;
+    overflow-y: hidden;
+    height: 5em;
+    background: rgba(195, 158, 160, .3);
+    box-shadow: 0 4px 30px rgba(211, 17, 17, 0.692);
 }

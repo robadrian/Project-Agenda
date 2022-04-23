@@ -8,7 +8,7 @@ let taskModal = `
     </div>
 `
 
-function addTask () {
+function addTask_btn () {
     const container = document.getElementById('work-area');
     const text = document.getElementById('desc');
     const contactDiv = document.getElementById('contactDiv')

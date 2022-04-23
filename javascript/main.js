@@ -1,5 +1,7 @@
 'use strict'
 
-const newPage = (link) => {
-    window.location.assign(link)
+const  newPage = (link) => {
+    window.location.assign(link);
 }
+
+

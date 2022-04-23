@@ -19,7 +19,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
-    color: violet;
+    color: rgb(72, 7, 58);
     text-shadow: 2px 3px 0px #00000037;
 }
 
@@ -31,6 +31,11 @@
     font-size: xx-large;
     border: none;
     background-color: rgba(30, 180, 30, 0.441);
+}
+
+#addApointBtn:hover {
+    cursor: pointer;
+    background: rgba(60, 255, 0, 0.364);
 }
 
 #apointDescription {

@@ -1,3 +1,9 @@
+/* background-color : rgba(248, 229, 229, 1)
+title-color : #000000
+text : #000000 or white
+buttons-background : rgba(250, 37, 94, 1)
+navs-background-color: rgba(195, 158, 160, 1) */
+
 * { 
     margin: 0;
     padding: 0;
@@ -5,12 +11,18 @@
 }
 
 body {
-    background-color: #aedfe1;;
+    background-color : rgba(248, 229, 229, 1);
 }
+
 #profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 2em;
+    text-align: center;
     box-sizing: border-box;
     margin-top: 1em;
-    margin-left: 85%;
+    margin-left: 50%;
 }
 
 main {
@@ -19,11 +31,11 @@ main {
     justify-content: space-between;
 }
 
-#work-area {
-    border-radius: 20px;
+#work-area{
+    background-color: rgba(195, 158, 160, 1);
+    border-radius: 16px;
     margin-top: -2em;
     margin-right: 6em;
-    background-color: rgba(255, 255, 255, 0.423);
     width: 60%;
 }
 #navigation {
@@ -32,7 +44,7 @@ main {
     margin-top: -2em;
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.423);
+    background: rgba(195, 158, 160, 1);
     width: 20%;
 }
 
@@ -44,7 +56,7 @@ main {
 }
 
 .view-btn {
-    color: orangered;
+    color: rgba(53, 25, 61, 0.73);
     margin-bottom: 2em;
     font-size: xx-large;
     background: none;
@@ -55,7 +67,7 @@ main {
     font-size: large;
     background: none;
     border: none;
-    color: green;
+    color: blue;
 }
 
 .view-btn:hover {
@@ -71,11 +83,16 @@ main {
 }
 
 #myP-btn {
-    background-color: black;
+    background: rgba(0, 0, 0, 0.33);
+    border-radius: 16px;
+    padding-left: 3em;
+    padding-right: 3em;
     color: white;
-    padding: .3em;
-    margin-right: 2em;
-    margin-top: 1em;
+}
+
+#myP-btn:hover {
+    background-color: white;
+    color: black;
 }
 
 footer {
@@ -86,13 +103,17 @@ footer {
     margin-right: auto;
     bottom: 0;
     width: 40%;
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 4px 30px rgba(211, 17, 17, 0.692);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(8, 7, 7, 0.68);
     animation-name: footer-ani2;
     animation-duration: 1s;
     animation-delay: 0.3s;
     animation-fill-mode: forwards;
     border-top-right-radius: 30px;
     height:2em;
-    background-color: rgba(255, 7, 7, 0.649);
 }
 
 footer img {
