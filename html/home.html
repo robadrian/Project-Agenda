@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/addTaskStyle.css">
     <link rel="stylesheet" href="../css/homeStyle.css">
     <link rel="stylesheet" href="../css/addApointStyle.css">
+    <script src="../javascript/main.js"></script>
     <script src="../javascript/addTask.js"></script>
     <script src="../javascript/addContact.js"></script>
     <script src="../javascript/addApoint.js"></script>
@@ -18,9 +19,8 @@
 <body>
 
     <div id="profile">
-        <button class="view-btn">Profile</button>
-    </div>
-        
+        <button class="view-btn" id="myP-btn">Profile</button>
+        <button class="view-btn" id="myP-btn" onclick="logOut('../index.html')">Log Out</button> 
     </div>
     
     <main>
@@ -31,28 +31,26 @@
 
             <div class="add-view">
                 <button class="view-btn">Contacts</button>
-                <button class="add-btn"  id="addContact" onclick="addContact()">Add contact +</button>
+                <button class="add-btn"  id="addContact" onclick="addContact_btn()">Add contact +</button>
             </div>
 
              <!--Task buttons -->
 
             <div class="add-view">
                 <button class="view-btn">Tasks</button>
-                <button class="add-btn" id='addTask' onclick="addTask()">Add task +</button>
+                <button class="add-btn" id='addTask' onclick="addTask_btn()">Add task +</button>
             </div>
             
              <!--Apointment buttons -->
 
             <div class="add-view">
                 <button class="view-btn">Apointments</button>
-                <button class="add-btn" id="addApoint" onclick="addApoint()">Add apointment +</button>
+                <button class="add-btn" id="addApoint" onclick="addApoint_btn()">Add apointment +</button>
             </div>
         </nav> 
 
         <div id="work-area">
-            <h1 id="desc">Here will stand the forms for new tasks, contacts and apointments,
-                and also already made ones
-            </h1>
+            
         </div>
 
     </main>

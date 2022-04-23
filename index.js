@@ -26,7 +26,7 @@ async function register() {
  
   if (characters(fullName) && characters(userName) && characters(password) && characters(confirm_password)) {
     if (confirm(password, confirm_password)) {
-      const uri = "http://localhost:3000/users";
+      const uri = "http://localhost:3000/users?_embed=contacts";
      
       fetch(uri).then(res => res.json()).then((data) => {
         if (!(data.filter(users => users.userName === userName).length > 0)) {
@@ -34,9 +34,10 @@ async function register() {
             fullName: fullName,
             userName: userName,
             password: password,
+            logged: true
  
           };
- 
+          console.log(uri)
           addUser(user);
         }
         else { alert('This user already exists'); }
@@ -60,10 +61,11 @@ async function login() {
 
     const data = fetch(uri).then(res => res.json()).then((data) => {
       if(data.filter(users => users.userName === loginUserName && users.password === loginPassword).length > 0) {
+        data.logged = true;
         window.location.assign('../html/home.html');
       } else alert("There is no user with this name");
     })
-
+    console.log(data);
   } else {
     alert("The fields must contain at least 9 characters")
   }

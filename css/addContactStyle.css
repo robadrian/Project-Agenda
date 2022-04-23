@@ -33,6 +33,12 @@
     background-color: rgba(30, 180, 30, 0.441);
 }
 
+#addContactBtn:hover {
+    cursor: pointer;
+    background: rgba(60, 255, 0, 0.364);
+}
+
+
 #contactName {
     font-size: xx-large;
     margin-top: 3em;

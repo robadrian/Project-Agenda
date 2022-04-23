@@ -12,14 +12,14 @@
 </head>
 <body>
     
-        <h1 id="requestLogin">Please enter your credentials</h1>
-
-        <!--LOGIN USER INPUT-->
+    <button onclick="newPage('../index.html')">Back</button>
+    <!--LOGIN USER INPUT-->
     
-        <div id="credentials">
+    <div id="credentials">
+            <h1 id="requestLogin">Please enter your credentials</h1>
 
-            <input type="text" placeholder="Username" id="username_login">
-            <input type="text" placeholder="Password" id="password_login">
+            <input autocomplete="off" type="text" placeholder="Username" id="username_login">
+            <input  autocomplete="off" type="password" placeholder="Password" id="password_login">
             <button onclick="login()">Login</button> 
 
         </div>

@@ -5,36 +5,45 @@
 }
 
 body {
-    background-color: #aedfe1;
+    background: url(../images/colour-3134831_1920.jpg);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: color;
 }
 
 #requestLogin {
-    margin-top: 3em;
     text-align: center;
 }
 
 #loginForm {
     display: flex;
     flex-direction: column;
+    background: rgba(158, 95, 95, 0.53);
 }
 
 #credentials {
     margin: 3em auto 3em auto;
-    background-color: rgba(255, 255, 255, 0.423);
+    background-color: rgba(255, 255, 255, 0.123);
     display: flex;
+    border-radius: 50px;
     flex-direction: column;
     padding: 2em;
+    animation-name: login-form;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    -shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
     justify-content: space-around;
     width: 30%;
 }
 
 input {
     margin-top: 2em;
+    text-align: center;
     border: none;
     background-color: rgba(255, 255, 255, 0.423);
     font-size: xx-large;
     padding: 0.5em;
-    border-radius: 20%;
+    border-radius: 40px;
     outline: none;
 }
 
@@ -43,7 +52,7 @@ button {
     margin-right: auto;
     background: none;
     border-style: none;
-    color: orangered;
+    color: white;
     margin-top: 2em;
     width: 40%;
     font-size: xx-large;
@@ -52,4 +61,15 @@ button {
 button:hover {
     cursor: pointer;
     color: blue;
+}
+
+
+
+@keyframes login-form {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
