@@ -12,7 +12,11 @@
 </head>
 <body>
     
-    <button onclick="newPage('../index.html')">Back</button>
+    <div id="btns">
+        <button id="back-btn" onclick="newPage('../index.html')">Back</button>
+        <button id="back-btn" onclick="newPage('../html/signup.html')">SignUp</button>
+    </div>
+
     <!--LOGIN USER INPUT-->
     
     <div id="credentials">
@@ -20,7 +24,7 @@
 
             <input autocomplete="off" type="text" placeholder="Username" id="username_login">
             <input  autocomplete="off" type="password" placeholder="Password" id="password_login">
-            <button onclick="login()">Login</button> 
+            <button onclick="uppLogin()">Login</button> 
 
         </div>
 

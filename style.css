@@ -100,7 +100,6 @@ body {
     animation-fill-mode: forwards;
     font-size: 30px;
     margin: 20px auto 2em auto;
-    filter: blur(6px);
     -webkit-box-shadow: -13px 9px 5px 0px rgba(250, 37, 94, 0.6); 
     box-shadow: -13px 9px 5px 0px rgba(250, 37, 94, 0.6);
     border-radius: 23px;
@@ -110,7 +109,6 @@ body {
 @keyframes msg {
     100% {
         transform: scale(1);
-        filter: blur(0px);
     }
 }
 

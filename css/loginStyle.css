@@ -1,13 +1,23 @@
+/* background-color : rgba(248, 229, 229, 1)
+title-color : #000000
+text : #000000 or white
+buttons-background : rgba(250, 37, 94, 1)
+navs-background-color: rgba(195, 158, 160, 1) */
+
+@font-face {
+    font-family: main;
+    src: url(/fonts/AlfaSlabOne-Regular.ttf);
+}
+
 * {
+    font-family: main;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background: url(../images/colour-3134831_1920.jpg);
-    background-color: rgba(0, 0, 0, 0.3);
-    background-blend-mode: color;
+    background-color:  rgba(248, 229, 229, 1);
 }
 
 #requestLogin {
@@ -17,12 +27,12 @@ body {
 #loginForm {
     display: flex;
     flex-direction: column;
-    background: rgba(158, 95, 95, 0.53);
+    background: rgba(195, 158, 160, 1);
 }
 
 #credentials {
     margin: 3em auto 3em auto;
-    background-color: rgba(255, 255, 255, 0.123);
+    background: rgba(195, 158, 160, 1);
     display: flex;
     border-radius: 50px;
     flex-direction: column;
@@ -30,8 +40,6 @@ body {
     animation-name: login-form;
     animation-duration: 4s;
     animation-fill-mode: forwards;
-    -shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.1px);
     justify-content: space-around;
     width: 30%;
 }
@@ -47,20 +55,41 @@ input {
     outline: none;
 }
 
+#back-btn {
+    width: 20%;
+    margin-left: 4em;
+}
+
 button {
     margin-left: auto;
     margin-right: auto;
     background: none;
     border-style: none;
     color: white;
+    border-radius: 23px;
+    padding: 5px;
     margin-top: 2em;
+    background-color: rgba(250, 37, 94, 1);
     width: 40%;
     font-size: xx-large;
 }
 
 button:hover {
     cursor: pointer;
-    color: blue;
+    background-color: white;
+    color: black;
+}
+#btns {
+    transform: translateY(-200px);
+    animation-name: btns;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btns {
+    100% {
+        transform: translateY(0);
+    }
 }
 
 

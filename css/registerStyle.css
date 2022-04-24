@@ -1,11 +1,23 @@
+/* background-color : rgba(248, 229, 229, 1)
+title-color : #000000
+text : #000000 or white
+buttons-background : rgba(250, 37, 94, 1)
+navs-background-color: rgba(195, 158, 160, 1) */
+
+@font-face {
+    font-family: main;
+    src: url(/fonts/AlfaSlabOne-Regular.ttf);
+}
+
 * {
+    font-family: main;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body { 
-    background-color: #aedfe1;
+    background-color: rgba(248, 229, 229, 1);
 }
 
 h1 {
@@ -15,9 +27,13 @@ h1 {
 
 #signup-form {
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.423);
+    background-color: rgba(195, 158, 160, 1);
     margin-top: 3em;
+    border-radius: 23px;
     align-items: center;
+    animation-name: signup-form;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
     padding: 2em;
     display: flex;
     flex-direction: column;
@@ -42,22 +58,56 @@ input {
     outline: none;
     font-size: xx-large;
     border-style: none;
-    border-radius: 20%;
+    border-radius: 23px;
+}
+#back-btn {
+    color: white;
+    margin-left: 5em;
+    padding: 5px;
+    width: 20%;
 }
 
+#back-btn:hover{
+    color: black;
+}
 button {
+    color: white;
     margin: 1em auto 0 auto;
+    background-color: rgba(250, 37, 94, 1);
+    border-radius: 23px;
     width: 30%;
-    background: none;
     border-style: none;
     font-size: xx-large;
 }
 
 button:hover {
     cursor: pointer;
-    color: orange;
+    color: black;
+    background-color: white;
 }
 
 #myP-btn {
     margin-right: 2em;
+}
+
+#btns {
+    transform: translateY(-200px);
+    animation-name: btns;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btns {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes signup-form {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

@@ -4,7 +4,13 @@ text : #000000 or white
 buttons-background : rgba(250, 37, 94, 1)
 navs-background-color: rgba(195, 158, 160, 1) */
 
+@font-face {
+    font-family: main;
+    src: url(/fonts/AlfaSlabOne-Regular.ttf);
+}
+
 * { 
+    font-family: main;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -58,16 +64,21 @@ main {
 .view-btn {
     color: rgba(53, 25, 61, 0.73);
     margin-bottom: 2em;
-    font-size: xx-large;
+    font-size: 27px;
     background: none;
     border: none;
 }
 
 .add-btn {
-    font-size: large;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
     background: none;
+    border-radius: 23px;
+    width: 70%;
     border: none;
-    color: blue;
+    background-color:rgba(250, 37, 94, 1);
+    color:white;
 }
 
 .view-btn:hover {
@@ -79,11 +90,12 @@ main {
 
 .add-btn:hover {
     cursor: pointer;
-    color: blue;
+    background-color: white;
+    color: black;
 }
 
 #myP-btn {
-    background: rgba(0, 0, 0, 0.33);
+    background: rgba(250, 37, 94, 1);
     border-radius: 16px;
     padding-left: 3em;
     padding-right: 3em;
@@ -124,7 +136,7 @@ footer img {
 
 footer::after {
     font-size: x-large;
-    color: white;
+    color: black;
     content: 'Social Media';
     position: absolute;
 }
