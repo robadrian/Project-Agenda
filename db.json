@@ -4,8 +4,29 @@
       "fullName": "Rob Vasile Adrian",
       "userName": "adirobadi",
       "password": "bosu2bosu2",
-      "logged": true,
+      "logged": false,
       "id": 1
+    },
+    {
+      "fullName": "Bianca Maxim",
+      "userName": "bia.maxim",
+      "password": "adirobadi",
+      "logged": false,
+      "id": 2
+    },
+    {
+      "fullName": "Rob Adi",
+      "userName": "1234adi",
+      "password": "bosu2bosu2",
+      "logged": false,
+      "id": 3
+    },
+    {
+      "fullName": "Bianca Maxim",
+      "userName": "bia.biamaxim",
+      "password": "adirobadi",
+      "logged": false,
+      "id": 4
     }
   ],
   "contacts": [],

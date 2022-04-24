@@ -30,7 +30,7 @@ function addContact_btn () {
 }
 
 async function appendContactDB() {
-    let uri = " http://localhost:3000/contacts?_expand=users";
+    let uri = " http://localhost:3000/contacts?";
 
     const container = document.getElementById('work-area');
     const text = document.getElementById('desc');
@@ -41,6 +41,7 @@ async function appendContactDB() {
     let contact = {
         name: contactName,
         number: contactNumber,
+        userId: 3
     }
 
     await fetch(uri, {
