@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="../css/addTaskStyle.css">
     <link rel="stylesheet" href="../css/homeStyle.css">
     <link rel="stylesheet" href="../css/addApointStyle.css">
+    <link rel="stylesheet" href="../css/renderContactsStyle.css">
     <script src="../javascript/main.js"></script>
     <script src="../javascript/addTask.js"></script>
     <script src="../javascript/addContact.js"></script>
     <script src="../javascript/addApoint.js"></script>
+    <script src="../javascript/renderContact.js"></script>
     <title>Agenda / Home</title>
 </head>
 <body>
@@ -30,7 +32,7 @@
             <!--Contacts buttons -->
 
             <div class="add-view">
-                <button class="view-btn">Contacts</button>
+                <button class="view-btn" onclick="renderContacts()">Contacts</button>
                 <button class="add-btn"  id="addContact" onclick="addContact_btn()">Add contact +</button>
             </div>
 
