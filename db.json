@@ -4,55 +4,22 @@
       "fullName": "Rob Vasile Adrian",
       "userName": "adirobadi",
       "password": "bosu2bosu2",
-      "logged": false,
       "id": 1
     },
     {
       "fullName": "Bianca Maxim",
       "userName": "bia.maxim",
       "password": "bosu2bosu2",
-      "logged": false,
-      "id": 2
-    }
-  ],
-  "contacts": [
-    {
-      "name": "Adi ",
-      "number": "0771062251",
-      "userId": 2,
       "id": 2
     },
     {
-      "name": "Rob Adrian",
-      "number": "0771062251",
-      "userId": 1,
+      "fullName": "Vasi Sarca",
+      "userName": "vasisarca123",
+      "password": "vasivasivasi",
       "id": 3
     }
   ],
-  "tasks": [
-    {
-      "title": "JavaScript / React",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "title": "Coafor",
-      "userId": 2,
-      "id": 2
-    }
-  ],
-  "apoints": [
-    {
-      "title": "Dentist",
-      "date": "2022-04-29",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "title": "Tuns",
-      "date": "2022-04-29",
-      "userId": 2,
-      "id": 2
-    }
-  ]
+  "contacts": [],
+  "tasks": [],
+  "apoints": []
 }
