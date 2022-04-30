@@ -49,33 +49,15 @@ async function register() {
 
 
 async function login() {
-
   let loginUserName = getDomValue("username_login");
   let loginPassword = getDomValue("password_login");
   if(characters(loginUserName) && loginPassword) {
     let uri ='http://localhost:3000/users';
-    let adi = await fetch(uri).then(res => res.json()).then(data => {
+    let loggedUserID = await fetch(uri).then(res => res.json()).then(data => {
       let userLogged = data.find(user => user.userName === loginUserName && user.password === loginPassword);
-        return userLogged.id
+      window.location.replace(`../html/home.html?id=${userLogged.id}`)
     }
-    )
-    return adi
+    ).catch(err => alert("No user Found"));
+    return loggedUserID
   } else {alert("The fields must contain at least 8 characters ")}
 }
-
-const uppLogin =() => login().then(y => {
-
-    const midd = async () => {
-      await fetch(`http://localhost:3000/users/${y}`, {
-        method: "PATCH",
-        body: JSON.stringify({
-          "logged" : true
-        }),
-        headers: { "Content-Type": "application/json" }
-      } )
-
-      window.location.replace("../html/home.html");
-    }  
-    midd();
-    
-}).catch(err => alert("No user found"));;

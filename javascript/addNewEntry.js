@@ -44,4 +44,15 @@ function render_fields (element, element_id1, element_id2, button1, button2, but
     document.getElementById(button3).disabled = false;
 
     work_area.insertAdjacentHTML("beforeend", element);
+};
+
+async function getUserId() {
+    let uri = "http://localhost:3000/users"
+
+        await fetch(uri).then(res => res.json()).then(data => {
+        let userLogged = data.filter(user => user.logged === true);
+        if(userLogged) {
+            return userLogged.id;
+        }
+    })
 }
