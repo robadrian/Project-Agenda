@@ -1,0 +1,65 @@
+.inputs-card {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    opacity: 0;
+    animation: fade-in 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transition: all 3s ease-in;
+}
+
+.title {
+     margin-top: 1em;
+     text-shadow: 2px -3px 2px #CE5937;
+}
+
+
+.add-newEntry-btn {
+    width: 30%;
+    color: white;
+    margin: var(--center);
+    margin-top: 3em;
+    font-size: var(--main-font-size);
+    border-radius: var(--main-border-radius);
+    border-style: none;
+    transition: all 0.3s ease-out;
+    background-color: green;
+}
+
+.add-newEntry-btn:hover {
+    background-color: greenyellow;
+    color: black;
+    cursor: pointer;
+}
+
+input {
+    text-align: center;
+    outline: none;
+    border: none;
+    padding: 1em;
+    border-radius: var(--main-border-radius);
+    font-size: var(--main-font-size);
+    margin: var(--center);
+    margin-top: 2em;
+    width: 70%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ANIMATIONS */ 
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+    }
+}

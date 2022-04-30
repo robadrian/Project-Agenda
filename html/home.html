@@ -6,48 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/homeStyle.css">
     <link rel="icon" href="../images/pencil-308509_1280.png">
-    <link rel="stylesheet" href="../css/addContactStyle.css">
-    <link rel="stylesheet" href="../css/addTaskStyle.css">
     <link rel="stylesheet" href="../css/homeStyle.css">
-    <link rel="stylesheet" href="../css/addApointStyle.css">
-    <link rel="stylesheet" href="../css/renderContactsStyle.css">
+    <link rel="stylesheet" href="/config.css">
+    <link rel="stylesheet" href="/css/home-forms-style.css">
     <script src="../javascript/main.js"></script>
-    <script src="../javascript/addTask.js"></script>
-    <script src="../javascript/addContact.js"></script>
-    <script src="../javascript/addApoint.js"></script>
-    <script src="../javascript/renderContact.js"></script>
+    <script src="/javascript/addNewEntry.js"></script>
     <title>Agenda / Home</title>
 </head>
 <body>
-
-    <div id="profile">
-        <button class="view-btn" id="myP-btn">Profile</button>
-        <button class="view-btn" id="myP-btn" onclick="upp()">Log Out</button> 
+    
+    <div class="profile">
+        <button class="view-btn myP-btn">Profile</button>
+        <button class="view-btn myP-btn" onclick="upp()">Log Out</button> 
     </div>
     
+
     <main>
 
-        <nav id="navigation">
+        <nav>
 
             <!--Contacts buttons -->
 
             <div class="add-view">
-                <button class="view-btn" onclick="renderContacts()">Contacts</button>
-                <button class="add-btn"  id="addContact" onclick="addContact_btn()">Add contact +</button>
+                <button class="view-btn">Contacts</button>
+                <button class="add-btn"  id="contact-btn" onclick="render_fields(contactModal, 'task', 
+                'apoint', 'contact-btn', 'task-btn', 'apoint-btn')">Add contact +</button>
             </div>
 
              <!--Task buttons -->
 
             <div class="add-view">
                 <button class="view-btn">Tasks</button>
-                <button class="add-btn" id='addTask' onclick="addTask_btn()">Add task +</button>
+                <button class="add-btn" id='task-btn' onclick="render_fields(taskModal, 'contact', 'apoint', 
+                'task-btn', 'contact-btn', 'apoint-btn')">Add task +</button>
             </div>
             
              <!--Apointment buttons -->
 
             <div class="add-view">
                 <button class="view-btn">Apointments</button>
-                <button class="add-btn" id="addApoint" onclick="addApoint_btn()">Add apointment +</button>
+                <button class="add-btn" id="apoint-btn" onclick="render_fields(apointModal, 'contact', 'task', 
+                'apoint-btn', 'contact-btn', 'task-btn')">Add apointment +</button>
             </div>
         </nav> 
 
@@ -60,9 +59,9 @@
     <!--SOCIAL MEDIA -->
     
     <footer>
-        <a href="https://www.facebook.com/profile.php?id=100008810794957"><img src="../images/facebook.png" alt="" width="40px" height="40px"></a>
-        <img src="../images/whatsapp.png" alt="" width="40px" height="40px">
-        <img src="../images/instagram.png" alt="" width="40px" height="40px">
+        <a href="https://www.facebook.com/profile.php?id=100008810794957"><img src="../images/facebook.png" alt="" width="30px" height="30px"></a>
+        <img src="../images/whatsapp.png" alt="" width="30px" height="30px">
+        <img src="../images/instagram.png" alt="" width="30px" height="30px">
     </footer>
 </body>
 </html>

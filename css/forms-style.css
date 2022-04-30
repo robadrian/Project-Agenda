@@ -1,0 +1,99 @@
+@font-face {
+    font-family: main;
+    src: url(/fonts/Abel-Regular.ttf);
+}
+
+* {
+    font-family: main;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: main;
+    background-color:  var(--main-background-color);
+    justify-content: center;
+    text-align: center;
+}
+
+.btn {
+    width: 20%;
+    color: white;
+    -webkit-box-shadow: -13px 9px 30px 0px rgba(250, 37, 94, .6); 
+    box-shadow: -13px 9px 30px 0px rgba(250, 37, 94, .6);
+    background-color: var(--button-background);
+    margin: var(--center);
+    margin-top: 0.5em;
+    border-style: none;
+    font-size: var(--main-font-size);
+    border-radius: var(--main-border-radius);
+    padding: 5px;
+    transform: translateY(-200px);
+    animation-name: btns;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+#login-btn {
+    width: 35%;
+    transform: translateY(0);
+    animation: none;
+}
+#register-btn {
+    width: 35%;
+    transform: translateY(0);
+    animation: none;
+}
+
+.credentials {
+    margin: var(--center);
+    margin-top: 1.5em;
+    background: rgba(195, 158, 160, 1);
+    display: flex;
+    border-radius: var(--main-border-radius);
+    flex-direction: column;
+    padding: 3em;
+    animation-name: login-form;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    -webkit-box-shadow: -13px 9px 30px 0px rgba(250, 37, 94, .6); 
+    box-shadow: -13px 9px 30px 0px rgba(250, 37, 94, .6);
+    justify-content: space-around;
+    width: 40%;
+}
+
+input {
+    text-align: center;
+    margin-top: 1em;
+    border: none;
+    font-size: xx-large;
+    padding: 0.5em;
+    border-radius: var(--main-border-radius);
+    outline: none;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes btns {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes login-form {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/pencil-308509_1280.png">
-    <link rel="stylesheet" href="../css/loginStyle.css">
+    <link rel="stylesheet" href="/config.css">
+    <link rel="stylesheet" href="/css/forms-style.css">
     <script src="../index.js"></script>
     <script src="../javascript/main.js"></script>
     <title>Agenda / Login</title>
 </head>
 <body>
     
-    <div id="btns">
-        <button id="back-btn" onclick="newPage('../index.html')">Back</button>
-        <button id="back-btn" onclick="newPage('../html/signup.html')">SignUp</button>
-    </div>
+        <button class="btn" onclick="newPage('../index.html')">Back</button>
+        <button class="btn" onclick="newPage('../html/signup.html')">SignUp</button>
 
     <!--LOGIN USER INPUT-->
     
-    <div id="credentials">
-            <h1 id="requestLogin">Please enter your credentials</h1>
+    <div class="credentials">
+            <h1>Please enter your credentials</h1>
 
             <input autocomplete="off" type="text" placeholder="Username" id="username_login">
             <input  autocomplete="off" type="password" placeholder="Password" id="password_login">
-            <button onclick="uppLogin()">Login</button> 
+            <button  class="btn" id="login-btn" onclick="uppLogin()">Login</button> 
 
         </div>
 

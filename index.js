@@ -1,9 +1,5 @@
 'use strict'
  
-//let fullName = document.getElementById('fullname').value;
-//let userName = document.getElementById('username').value;
-//let password = document.getElementById('password').value;
- 
 const confirm = (initialPass, confirmation) => initialPass === confirmation ? true : false;
 const getDomValue = (name) => document.getElementById(name).value;
 const characters = (field_one) => field_one <= 8 ? false : true;
@@ -77,8 +73,9 @@ const uppLogin =() => login().then(y => {
         }),
         headers: { "Content-Type": "application/json" }
       } )
-      
+
+      window.location.replace("../html/home.html");
     }  
     midd();
-    window.location.replace("../html/home.html");
-}).catch(err => alert("No user found"));
+    
+}).catch(err => alert("No user found"));;

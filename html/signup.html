@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/pencil-308509_1280.png">
-    <link rel="stylesheet" href="../css/registerStyle.css">
+    <link rel="stylesheet" href="/css/forms-style.css">
+    <link rel="stylesheet" href="/config.css">
     <script src="../index.js"></script>
     <script src="../javascript/main.js"></script>
     <title>Agenda / Register</title>
@@ -13,19 +14,17 @@
 <body>
   
     <!--SIGNUP CREDENTIALS -->
-    <div id="btns">
-        <button  id="back-btn" onclick="newPage('../html/login.html')">Login</button>
-        <button id="back-btn" onclick="newPage('../index.html')">Back</button>
-    </div>
+        <button  class="btn" onclick="newPage('../html/login.html')">Login</button>
+        <button class="btn" onclick="newPage('../index.html')">Back</button>
         
-        <div id="signup-form">
+        <div class="credentials">
             <h1>Please insert your credentials</h1>
 
             <input  autocomplete="off" type="text" placeholder="Full Name" id="fullname" name="fullname">
             <input autocomplete="off" type="text" placeholder="Username" id="username" name="username" >
             <input autocomplete="off" type="password" placeholder="Password" id="password" name="password">
             <input autocomplete="off" type="password" placeholder="Confirm Password" id="confirmpassword">
-            <button onclick="register()">Register</button>
+            <button onclick="register()" class="btn" id="register-btn">Register</button>
             
         </div>
 </body>

@@ -1,0 +1,25 @@
+
+:root {
+
+    /* COLORS */
+
+    --main-background-color: rgba(248, 229, 229, 1);
+    --secondary-background-color: rgba(195, 158, 160, 1);
+    --button-hover-background: white;
+    --button-background: rgba(250, 37, 94, 1);
+    --text-color: white;
+
+    /* FONT-SIZE , CENTER, BORDER-RADIUS ... */
+
+    --title-font-size: 4em;
+    --secondary-font-size: 3em;
+    --main-font-size: 2em;
+
+    --center: 0 auto;
+
+    --main-border-radius: 2em;
+    --secondary-border-radius: 1em;
+
+    --padding : 1em
+    --shadow: -13px 9px 30px 0px rgba(250, 37, 94, .6);
+}
