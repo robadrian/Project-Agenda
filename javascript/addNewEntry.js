@@ -1,58 +1,73 @@
 'use strict'  
 
-// HTML CARDS
+// INPUTS - HTML ELEMENTS 
 
 const apointModal = `<div class='inputs-card' id="apoint"> 
 <h1 class='title'> NEW APOINTMENT </h1>
 <input placeholder='Description' id='apointDescription'> 
 <input placeholder='Date' id='date' type='date'>
-<button class="add-newEntry-btn"> Add </button>
+<button class="add-newEntry-btn" onclick="newEntry(categories[2], 'apointDescription', 'date')"> Add </button>
 </div>`
 
 const contactModal = `<div class="inputs-card" id="contact"> 
-        <h1 class='title'> NEW CONTACT </h1>
-        <input placeholder='Full Name' id='contactName'> 
-        <input placeholder='Phone Number' id='contactNumber' type='number'>
-        <button class='add-newEntry-btn'> Add </button>
-    </div>
+<h1 class='title'> NEW CONTACT </h1>
+<input placeholder='Full Name' id='contactName'> 
+<input placeholder='Phone Number' id='contactNumber' type='number'>
+<button class='add-newEntry-btn' onclick="newEntry(categories[0], 'contactName', 'contactNumber')"> Add </button>
+</div>
 `
 const taskModal = `<div class="inputs-card" id="task"> 
-        <h1 class='title'> NEW TASK </h1>
-        <input placeholder='Title' id='taskTitle'> 
-        <button class='add-newEntry-btn'> Add </button>
-    </div>
+<h1 class='title'> NEW TASK </h1>
+<input placeholder='Title' id='taskTitle'> 
+<button class='add-newEntry-btn' onclick="newEntry(categories[1], 'taskTitle')"> Add </button>
+</div>
 `
+
 // GETTING DOM VALUES AND ELEMENTS 
 
-const getDomValue = (element_value) =>  document.getElementById(element_value).value;
+const getDomValue = (element_value) =>  element_value === undefined ? "" : document.getElementById(element_value).value;
 const getDomElement = (element_html) => document.getElementById(element_html);
-
+const characters = (field_one) => field_one <= 3 ? false : true;
 // RENDER MODALS FUNCTION
 
-function render_fields (element, element_id1, element_id2, button1, button2, button3) {
-
+function render_fields (element) {
+    
     const work_area = getDomElement("work-area");
     
-    const el1 = getDomElement(element_id1);
-    const el2 = getDomElement(element_id2);
-
-    el1 !== null && work_area.removeChild(el1);
-    el2 !== null && work_area.removeChild(el2);
-    
-    document.getElementById(button1).disabled = true;
-    document.getElementById(button2).disabled = false;
-    document.getElementById(button3).disabled = false;
-
+    work_area !== null && work_area.replaceChildren();    
     work_area.insertAdjacentHTML("beforeend", element);
 };
+//CATEGORIES 
 
-async function getUserId() {
-    let uri = "http://localhost:3000/users"
+const categories = ["contacts", "tasks", "apoints"];
 
-        await fetch(uri).then(res => res.json()).then(data => {
-        let userLogged = data.filter(user => user.logged === true);
-        if(userLogged) {
-            return userLogged.id;
+// GETTING LOGGED USER ID 
+
+const loggedUser = new URLSearchParams(window.location.search).get("id");
+
+// POST - ADDING ENTRIES TO DATABASE
+
+async function newEntry (category, identifier, details) {
+
+    const entryIdentifier = getDomValue(identifier);
+    const entryDetails = getDomValue(details);
+    
+    if (characters(entryIdentifier)) {
+        let entry = {
+            identifier: entryIdentifier,
+            details:entryDetails,
+            userId: loggedUser
         }
-    })
-}
+        
+        entry.details === "" && delete entry.details;
+        
+        let uri = ` http://localhost:3000/${category}`;
+        
+        await fetch(uri, {
+            method: "POST",
+            body: JSON.stringify(entry),
+            headers: { "Content-Type": "application/json" }
+        })
+        
+    } else alert("The fileds must contain atleast 3 characters")
+    } 

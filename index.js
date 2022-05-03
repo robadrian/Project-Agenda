@@ -10,8 +10,6 @@ async function addUser(first) {
     body: JSON.stringify(first),
     headers: { "Content-Type": "application/json" }
   })
- 
-  window.location.assign('../html/home.html');
 }
  
 async function register() {
@@ -23,19 +21,16 @@ async function register() {
   if (characters(fullName) && characters(userName) && characters(password) && characters(confirm_password)) {
     if (confirm(password, confirm_password)) {
       const uri = "http://localhost:3000/users";
-     
       fetch(uri).then(res => res.json()).then((data) => {
+
         if (!(data.filter(users => users.userName === userName).length > 0)) {
           let user = {
             fullName: fullName,
             userName: userName,
             password: password,
-            logged: true
- 
           };
-          console.log(uri)
           addUser(user);
-          window.location.assign(`../html/home.html`);
+          window.location.assign(`../html/home.html?id=${data.length + 1}`);
         }
         else { alert('This user already exists'); }
       })

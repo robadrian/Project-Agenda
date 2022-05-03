@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/homeStyle.css">
     <link rel="stylesheet" href="/config.css">
     <link rel="stylesheet" href="/css/home-forms-style.css">
+    <link rel="stylesheet" href="../css/cardStyle.css">
+    <script src="../javascript/renderEntries.js"></script>
     <script src="../javascript/main.js"></script>
     <script src="/javascript/addNewEntry.js"></script>
     <title>Agenda / Home</title>
@@ -28,25 +30,22 @@
             <!--Contacts buttons -->
 
             <div class="add-view">
-                <button class="view-btn">Contacts</button>
-                <button class="add-btn"  id="contact-btn" onclick="render_fields(contactModal, 'task', 
-                'apoint', 'contact-btn', 'task-btn', 'apoint-btn')">Add contact +</button>
+                <button class="view-btn" onclick="renderEntries('contacts')">Contacts</button>
+                <button class="add-btn" onclick="render_fields(contactModal)">Add contact +</button>
             </div>
 
              <!--Task buttons -->
 
             <div class="add-view">
                 <button class="view-btn">Tasks</button>
-                <button class="add-btn" id='task-btn' onclick="render_fields(taskModal, 'contact', 'apoint', 
-                'task-btn', 'contact-btn', 'apoint-btn')">Add task +</button>
+                <button class="add-btn" onclick="render_fields(taskModal)">Add task +</button>
             </div>
             
              <!--Apointment buttons -->
 
             <div class="add-view">
                 <button class="view-btn">Apointments</button>
-                <button class="add-btn" id="apoint-btn" onclick="render_fields(apointModal, 'contact', 'task', 
-                'apoint-btn', 'contact-btn', 'task-btn')">Add apointment +</button>
+                <button class="add-btn" onclick="render_fields(apointModal)">Add apointment +</button>
             </div>
         </nav> 
 
