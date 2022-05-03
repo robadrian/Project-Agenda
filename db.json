@@ -15,18 +15,6 @@
   ],
   "contacts": [
     {
-      "identifier": "Rob Vasile Adrian",
-      "details": "0771062251",
-      "userId": "1",
-      "id": 1
-    },
-    {
-      "identifier": "Urgenta",
-      "details": "112",
-      "userId": "1",
-      "id": 2
-    },
-    {
       "identifier": "Adi",
       "details": "0771062251",
       "userId": "2",
@@ -37,37 +25,9 @@
       "details": "1234",
       "userId": "2",
       "id": 4
-    },
-    {
-      "identifier": "Bia ",
-      "details": "112",
-      "userId": "1",
-      "id": 5
-    },
-    {
-      "identifier": "Rob Vasile Adrian",
-      "details": "0771062251",
-      "userId": "1",
-      "id": 6
-    },
-    {
-      "identifier": "Rob Vasile Adrian",
-      "details": "0771062251",
-      "userId": "1",
-      "id": 7
     }
   ],
   "tasks": [
-    {
-      "identifier": "Go to the dentist",
-      "userId": "1",
-      "id": 1
-    },
-    {
-      "identifier": "Wash the dogs",
-      "userId": "1",
-      "id": 2
-    },
     {
       "identifier": "Do homework",
       "userId": "2",
@@ -80,18 +40,6 @@
     }
   ],
   "apoints": [
-    {
-      "identifier": "Driving Lessons",
-      "details": "2022-05-03",
-      "userId": "1",
-      "id": 1
-    },
-    {
-      "identifier": "Doctor",
-      "details": "2022-05-19",
-      "userId": "1",
-      "id": 2
-    },
     {
       "identifier": "Film with Adi",
       "details": "2022-05-31",

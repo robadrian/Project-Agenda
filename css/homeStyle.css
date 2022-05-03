@@ -46,7 +46,10 @@ main {
     box-shadow: -11px 10px 0px -1px #FF5F6E;
     width: 60%;
 }
-
+.chooseAction {
+    font-size: var(--main-font-size);
+    margin-top: 2em;
+}
 nav {
     position: fixed;
     border-top-right-radius: 20px;

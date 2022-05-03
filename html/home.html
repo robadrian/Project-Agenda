@@ -30,27 +30,27 @@
             <!--Contacts buttons -->
 
             <div class="add-view">
-                <button class="view-btn" onclick="renderEntries('contacts')">Contacts</button>
+                <button class="view-btn" onclick="renderEntries('contacts')">View contacts</button>
                 <button class="add-btn" onclick="render_fields(contactModal)">Add contact +</button>
             </div>
 
              <!--Task buttons -->
 
             <div class="add-view">
-                <button class="view-btn">Tasks</button>
+                <button class="view-btn" onclick="renderEntries('tasks')">View tasks</button>
                 <button class="add-btn" onclick="render_fields(taskModal)">Add task +</button>
             </div>
             
              <!--Apointment buttons -->
 
             <div class="add-view">
-                <button class="view-btn">Apointments</button>
+                <button class="view-btn" onclick="renderEntries('apoints')">View apointments</button>
                 <button class="add-btn" onclick="render_fields(apointModal)">Add apointment +</button>
             </div>
         </nav> 
 
         <div id="work-area">
-            
+            <p class="chooseAction">Please choose an action</p>
         </div>
 
     </main>

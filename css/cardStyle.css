@@ -26,6 +26,7 @@
     height: fit-content;
     background-color: red;
     border-radius: var(--main-border-radius);
+    transition: all 3s ease-out;
 }
 
 .cardContainer button:hover {
