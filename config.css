@@ -1,25 +1,24 @@
-
 :root {
 
+    /* FONT */
+    @font-face {
+        font-family: title;
+        src: url(/fonts/Syncopate-Regular.ttf);
+    }
+    @font-face {
+        font-family: main;
+        src: url(/fonts/Abel-Regular.ttf);
+    }
+
+    --title-font: title;    
+    --main-font: main;
+
     /* COLORS */
-
-    --main-background-color: rgba(248, 229, 229, 1);
-    --secondary-background-color: rgba(195, 158, 160, 1);
-    --button-hover-background: white;
-    --button-background: rgba(250, 37, 94, 1);
-    --text-color: white;
-
-    /* FONT-SIZE , CENTER, BORDER-RADIUS ... */
-
-    --title-font-size: 4em;
-    --secondary-font-size: 3em;
-    --main-font-size: 2em;
-
-    --center: 0 auto;
-
-    --main-border-radius: 2em;
-    --secondary-border-radius: 1em;
-
-    --padding : 1em
-    --shadow: -13px 9px 30px 0px rgba(250, 37, 94, .6);
+    --main-background-color: rgba(254, 255, 223, 1);
+    --second-background-color: rgba(221, 224, 171, 1);
+    --button-background-color: rgba(102, 139, 164, 1);
+    --main-font-color: rgba(151, 203, 169, 1);
+    --second-font-color: rgba(0, 0, 0, 1);
+    --button-font-color: rgba(255, 255, 255, 1);
+    
 }
