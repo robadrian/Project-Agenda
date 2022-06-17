@@ -24,7 +24,6 @@ const taskModal = `<div class="inputs-card" id="task">
 `
 
 // GETTING DOM VALUES AND ELEMENTS 
-
 const getDomValue = (element_value) =>  element_value === undefined ? "" : document.getElementById(element_value).value;
 const getDomElement = (element_html) => document.getElementById(element_html);
 const characters = (field_one) => field_one <= 3 ? false : true;
@@ -37,6 +36,7 @@ function render_fields (element) {
     work_area !== null && work_area.replaceChildren();    
     work_area.insertAdjacentHTML("beforeend", element);
 };
+
 //CATEGORIES 
 
 const categories = ["contacts", "tasks", "apoints"];
@@ -49,6 +49,7 @@ const loggedUser = new URLSearchParams(window.location.search).get("id");
 
 async function newEntry (category, identifier, details) {
 
+    const work = getDomElement("work-area");
     const entryIdentifier = getDomValue(identifier);
     const entryDetails = getDomValue(details);
     
@@ -68,6 +69,6 @@ async function newEntry (category, identifier, details) {
             body: JSON.stringify(entry),
             headers: { "Content-Type": "application/json" }
         })
-        
+    work.replaceChildren();        
     } else alert("The fileds must contain atleast 3 characters")
-    } 
+} 

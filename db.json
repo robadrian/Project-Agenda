@@ -11,46 +11,22 @@
       "userName": "bia.maxim",
       "password": "bosu2bosu2",
       "id": 2
+    },
+    {
+      "fullName": "Rob Vasile Adrian",
+      "userName": "adirobadi2",
+      "password": "bosu2bosu2",
+      "id": 3
     }
   ],
   "contacts": [
     {
-      "identifier": "Adi",
+      "identifier": "Rob Vasile Adrian",
       "details": "0771062251",
-      "userId": "2",
-      "id": 3
-    },
-    {
-      "identifier": "Digi",
-      "details": "1234",
-      "userId": "2",
-      "id": 4
+      "userId": "3",
+      "id": 1
     }
   ],
-  "tasks": [
-    {
-      "identifier": "Do homework",
-      "userId": "2",
-      "id": 3
-    },
-    {
-      "identifier": "Go to classes",
-      "userId": "2",
-      "id": 4
-    }
-  ],
-  "apoints": [
-    {
-      "identifier": "Film with Adi",
-      "details": "2022-05-31",
-      "userId": "2",
-      "id": 3
-    },
-    {
-      "identifier": "Go to the gym ",
-      "details": "2022-05-11",
-      "userId": "2",
-      "id": 4
-    }
-  ]
+  "tasks": [],
+  "apoints": []
 }

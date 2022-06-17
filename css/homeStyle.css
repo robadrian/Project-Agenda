@@ -13,155 +13,110 @@
 
 body {
     background-color : var(--main-background-color);
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    grid-template-rows: repeat(5, 20vh); 
+    grid-template-areas: 'nav none button'
+                         'nav work work'
+                         'nav work work'
+                         'nav work work'
+                         'footer work work';
 }
 
 .profile {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    margin-right: 2em;
-    text-align: center;
-    box-sizing: border-box;
-    margin-top: 1em;
-    margin-left: 50%;
+    grid-area: button;
+    margin-right: 1rem;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.profile > button {
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: var(--button-font-color);
+    border: none;
+    align-self: center;
+    transition: all 1s ;
+    background-color: var(--button-background-color);
 }
 
-#work-area{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    min-height: 35em;
-    background-color: rgba(195, 158, 160, 1);
-    border-radius: 16px;
-    margin-top: -2em;
-    margin-right: 6em;
-    margin-left: 30em;
-    -webkit-box-shadow: -11px 10px 0px -1px #FF5F6E; 
-    box-shadow: -11px 10px 0px -1px #FF5F6E;
-    width: 60%;
+.profile > button:hover {
+    border-radius: 23px;
+    cursor: pointer;
 }
-.chooseAction {
-    font-size: var(--main-font-size);
-    margin-top: 2em;
-}
+
 nav {
     position: fixed;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-top: -2em;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-shadow: 8px 10px 0px -1px #FF5F6E; 
-    box-shadow: 8px 10px 0px -1px #FF5F6E;  
-    background: rgba(195, 158, 160, 1);
-    transition: all 0.5s ease-in;
-    width: 20%;
+    grid-area: nav;
+    align-self: center;
 }
 
 .add-view {
     display: flex;
+    margin-bottom: 2rem;
     flex-direction: column;
-    padding-bottom: 2em;
-    padding-top: 2em;
+    justify-content: space-around;
 }
 
-.view-btn {
-    color: rgba(53, 25, 61, 0.73);
-    width: 80%;
-    margin: var(--center);
-    margin-bottom: 2em;
-    font-size: 2em;
-    background: none;
-    transition: all 0.3s ease-in-out;
+.add-view > button {
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
     border: none;
-}
-
-.add-btn {
-    font-size: 20px;
-    margin: var(--center);
-    background: none;
-    border-radius: 23px;
-    width: 70%;
-    border: none;
-    background-color:rgba(250, 37, 94, 1);
-    color:white;
-    transition: all 0.3s ease-in;
-}
-
-.view-btn:hover {
-    cursor: pointer;
-    color: brown;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.add-btn:hover {
-    cursor: pointer;
-    background-color: white;
-    color: black;
-}
-
-.myP-btn {
-    background: var(--button-background);
-    border-radius: 16px;
-    margin-right: 2em;
-    padding-left: 3em;
-    padding-right: 3em;
-    transition: all .3s ease-in;
     color: white;
+    transition: all 1s;
+    background-color: black;
 }
 
-.myP-btn:hover {
-    background-color: white;
-    color: black;
+.add-view > button:hover {
+    cursor: pointer;
+    border-radius: 13px;
+}
+#work-area {
+    background-color: var(--second-background-color);
+    display: flex;
+    -webkit-box-shadow: 5px 4px 10px 2px #000000; 
+    box-shadow: 5px 4px 10px 2px #000000;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    grid-area: work;
+    height: 90%;
+    overflow-y: scroll;
+    width: 90%;
+    justify-self: center;
+    align-self: center;
 }
 
 footer {
-    position:fixed;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    width: 20%;
-    background: rgba(255, 255, 255, 0.33);
-    box-shadow: 0 4px 30px rgba(211, 17, 17, 0.692);
-    animation-name: footer-ani2;
-    animation-duration: 1s;
-    animation-delay: 0.3s;
-    animation-fill-mode: forwards;
-    border-top-right-radius: 30px;
+    position: fixed;
+    background-color: var(--second-background-color);
+    display: grid;
+    width: 5%;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    padding: 1em;
+    grid-template-columns: 33% 33% 33%;
+    grid-area: footer;
+    align-self: flex-end;
+    justify-self: baseline;
     transition: all 1s;
-    height:1.5em;
 }
 
-footer img {
-    margin-left: 10em;
-    margin-right: 10em;
-    margin-top: 2em;
+footer > img {
+    justify-self: center;
+    margin-bottom: 1em;
     transform: scale(0);
+    transition: all 1s;
 }
 
-footer::after {
-    font-size: x-large;
-    color: black;
-    content: 'Social Media';
-    position: absolute;
-}
-
-footer:hover{
-    animation-name: footer-ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    height: 4.5em;
-    width: 100%;
+footer:hover {
+    width: 20%;
+    clip-path: none;
 }
 
 footer:hover img {
     transform: scale(1);
 }
+
 

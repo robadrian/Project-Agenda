@@ -1,7 +1,6 @@
 'use strict';
 
 const logged = new URLSearchParams(window.location.search).get("id");
-const entryCategory = new URLSearchParams(window.location.search).get("category") || "";
 
 async function renderEntries(category) {
     
@@ -14,24 +13,22 @@ async function renderEntries(category) {
             <div class="cardContainer" id="card${prop.id}">
             <p>${prop.identifier}</p>
             <p>${prop.details !== undefined ? prop.details : ""}</p>
-            <button onclick="deleteEntry('${category}', ${prop.id})"> Delete </button>
+            <button class="deleteBtn" type="submit" onclick="deleteEntry('${category}', ${prop.id})"> Delete </button>
             </div> ` 
+            
             work.insertAdjacentHTML('afterbegin', renderCard);
         })
     })
-   
-    work.replaceChildren();
+    
+    work.replaceChildren(); 
 }
 
 
-
 async function deleteEntry (category, entryId) {
-
     let uri = `http://localhost:3000/${category}/${entryId}`
     let card = document.getElementById(`card${entryId}`);
-    card.remove();
+    card.remove()
     await fetch(uri, {
         method: "DELETE"
     })
-    alert("Entry Deleted")
 }

@@ -1,13 +1,4 @@
 
-@font-face {
-    font-family: title;
-    src: url(/fonts/Syncopate-Regular.ttf);
-}
-@font-face {
-    font-family: main;
-    src: url(/fonts/Abel-Regular.ttf);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -16,111 +7,108 @@
 }
 
 body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 25% 30% 45%;
+    grid-template-rows: repeat(3, 1fr);
+    background-repeat: no-repeat;
     background-color: var(--main-background-color);
     box-sizing: border-box;
+    grid-template-areas: 'title  .....  buttons'
+    '......  msg   ......'
+    'footer footer footer';
 }
 
 .title {
-    font-family: title;
-    font-size: var(--title-font-size);
-    width: 30%;
-    margin: 1rem;
-}
-
-.main {
-    display: flex;
-    flex-direction: row;
+    font-family: var(--title-font);
+    grid-area: title;
+    font-size: 4em;
+    margin-left: 1em;
+    align-self: center;
+    grid-gap: 1em;
+    justify-self: center;
+    color: var(--main-font-color);
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-around;
-    -webkit-box-shadow: -13px 9px 30px 0px rgba(250, 37, 94, .6); 
-    box-shadow: -13px 9px 30px 0px rgba(250, 37, 94, 0.6);
-    background-color: var(--secondary-background-color);
-    padding: 1rem;
-    width: 50%;
-    margin-left: 30%;
-    margin-bottom: 40px;
-    animation-name: nav;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    transform: translateX(800px);
-    border-bottom-left-radius: var(--secondary-border-radius);
-
+    grid-area: buttons;
+    grid-gap: 1em;
+    align-self: center;
+    justify-self: center;
 }
 
-.login-btn {
-    background-color: var(--button-background);
-    border-style: none;
+.navigation > button {
+    font-size: 2em;
     padding: 1rem;
-    border-radius: var(--main-border-radius);
-    font-size: var(--main-font-size);
-    transition: all 0.3s ease-in;
+    margin-left: 2em;
+    transition: all 1s ;
+    color: var(--button-font-color);
+    background-color: var(--button-background-color);
+    border: none;
 }
 
-.login-btn:hover {
-    background-color: var(--button-hover-background);
-    color: #000;
+.navigation > button:hover {
     cursor: pointer;
+    border-radius: 10px;
+    transition: all 1s;
 }
-
-.register-btn {
-    background-color: #000;
-    color: white;
-    border-style: none;
-    padding: 1rem;
-    border-radius: var(--main-border-radius);
-    font-size: var(--main-font-size);
-    transition: all 0.3s ease-in;
-}
-.register-btn:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-}
-
-
 #greeting-msg {
-    box-sizing: border-box;
-    background-color: var(--secondary-background-color);
-    padding: 5em;
-    max-width: 50%;
-    transform: scale(0.1);
-    animation-name: msg;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    font-size: var(--main-font-size);
-    margin: 20px auto 2em auto;
-    -webkit-box-shadow: -13px 9px 5px 0px rgba(250, 37, 94, 0.6); 
-    box-shadow: -13px 9px 5px 0px rgba(250, 37, 94, 0.6);
-    border-radius: var(--secondary-border-radius);
+    font-size: 2em;
+    background-color: var(--second-background-color);
+    color: var(--second-font-color);
+    padding: 2em;
+    grid-area: msg;
+    -webkit-box-shadow: 5px 4px 10px 2px #000000; 
+    box-shadow: 5px 4px 10px 2px #000000;
+    text-align: justify;
+    align-self: center;
+    justify-self: center;
+    transition: all 1s;
 }
 
+#greeting-msg:hover {
+    border-radius: 30px;
+}
 
 footer {
-    position: fixed;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-around;
+    background-color: var(--second-background-color);
+    display: grid;
     width: 100%;
-    bottom: 0;
-    padding: 30px;
-    overflow-y: hidden;
-    height: 5em;
-    background: rgba(195, 158, 160, .3);
-    box-shadow: 0 4px 30px rgba(211, 17, 17, 0.692);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0% 20%);
+    padding: 1em;
+    grid-template-columns: 33% 33% 33%;
+    grid-area: footer;
+    height: 0;
+    align-self: flex-end;
+    justify-self: baseline;
+    transition: all 1s;
 }
 
-/* ANIMATIONS */
-
-@keyframes msg {
-    100% {
-        transform: scale(1);
-    }
+footer > img {
+    justify-self: center;
+    margin-bottom: 1em;
+    transform: scale(0);
+    transition: all 1s;
 }
-@keyframes nav {
-    100% {
-        transform: translateX(0);
+
+footer:hover {
+    height: 20%;
+}
+
+footer:hover img {
+    transform: scale(1);
+}
+
+@media screen and (max-width : 1156px){
+    body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 1fr);
+        background-color: var(--main-background-color);
+        box-sizing: border-box;
+        grid-template-areas: 'title'
+                            'buttons'
+                              'msg'
+                            'footer';
     }
 }
