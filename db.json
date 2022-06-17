@@ -11,9 +11,22 @@
       "userName": "bia.maxim",
       "password": "bosu2bosu2",
       "id": 2
+    },
+    {
+      "fullName": "Rob Vasile Adrian",
+      "userName": "adirobadi2",
+      "password": "bosu2bosu2",
+      "id": 3
     }
   ],
-  "contacts": [],
+  "contacts": [
+    {
+      "identifier": "Rob Vasile Adrian",
+      "details": "0771062251",
+      "userId": "3",
+      "id": 1
+    }
+  ],
   "tasks": [],
   "apoints": []
 }
